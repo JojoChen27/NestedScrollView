@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2ABFC2EA29683E9200D9202C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC2E929683E9200D9202C /* AppDelegate.swift */; };
+		2ABFC2EC29683E9200D9202C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC2EB29683E9200D9202C /* SceneDelegate.swift */; };
+		2ABFC2EE29683E9200D9202C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC2ED29683E9200D9202C /* ViewController.swift */; };
+		2ABFC2F129683E9200D9202C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ABFC2EF29683E9200D9202C /* Main.storyboard */; };
+		2ABFC2F329683E9300D9202C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ABFC2F229683E9300D9202C /* Assets.xcassets */; };
+		2ABFC2F629683E9300D9202C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ABFC2F429683E9300D9202C /* LaunchScreen.storyboard */; };
+		2ABFC2FE29683F0D00D9202C /* NestedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC2FD29683F0D00D9202C /* NestedScrollViewController.swift */; };
+		2ABFC30029683FF700D9202C /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC2FF29683FF700D9202C /* ExampleViewController.swift */; };
+		2ABFC302296843B300D9202C /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC301296843B300D9202C /* OneViewController.swift */; };
+		2ABFC304296843C600D9202C /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC303296843C600D9202C /* TwoViewController.swift */; };
+		2ABFC306296843DD00D9202C /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC305296843DD00D9202C /* ThreeViewController.swift */; };
+		2ACAC2212969D44F00E86D7A /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAC2202969D44F00E86D7A /* ScrollViewController.swift */; };
+		2ACAC225296AA82F00E86D7A /* IgnoreIndexPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAC224296AA82F00E86D7A /* IgnoreIndexPagingViewController.swift */; };
+		2ACAC228296AB6F700E86D7A /* ExamplePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAC227296AB6F700E86D7A /* ExamplePageViewController.swift */; };
+		5FF59BC920ED77801D0B37AD /* Pods_NestedScrollView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228B284FF10361E888390129 /* Pods_NestedScrollView.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0192CBE31FFE6F980185A902 /* Pods-NestedScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedScrollView.release.xcconfig"; path = "Target Support Files/Pods-NestedScrollView/Pods-NestedScrollView.release.xcconfig"; sourceTree = "<group>"; };
+		228B284FF10361E888390129 /* Pods_NestedScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NestedScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABFC2E629683E9200D9202C /* NestedScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestedScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABFC2E929683E9200D9202C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2ABFC2EB29683E9200D9202C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2ABFC2ED29683E9200D9202C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2ABFC2F029683E9200D9202C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2ABFC2F229683E9300D9202C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2ABFC2F529683E9300D9202C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2ABFC2F729683E9300D9202C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ABFC2FD29683F0D00D9202C /* NestedScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedScrollViewController.swift; sourceTree = "<group>"; };
+		2ABFC2FF29683FF700D9202C /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		2ABFC301296843B300D9202C /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
+		2ABFC303296843C600D9202C /* TwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
+		2ABFC305296843DD00D9202C /* ThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
+		2ACAC2202969D44F00E86D7A /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		2ACAC224296AA82F00E86D7A /* IgnoreIndexPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreIndexPagingViewController.swift; sourceTree = "<group>"; };
+		2ACAC227296AB6F700E86D7A /* ExamplePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePageViewController.swift; sourceTree = "<group>"; };
+		CC74D5EDCCA0E7DB08A04047 /* Pods-NestedScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedScrollView.debug.xcconfig"; path = "Target Support Files/Pods-NestedScrollView/Pods-NestedScrollView.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2ABFC2E329683E9200D9202C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF59BC920ED77801D0B37AD /* Pods_NestedScrollView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		086F89F1FD3B5D135FC05659 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC74D5EDCCA0E7DB08A04047 /* Pods-NestedScrollView.debug.xcconfig */,
+				0192CBE31FFE6F980185A902 /* Pods-NestedScrollView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		27533B9122669834FBF26109 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				228B284FF10361E888390129 /* Pods_NestedScrollView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2ABFC2DD29683E9200D9202C = {
+			isa = PBXGroup;
+			children = (
+				2ABFC2E829683E9200D9202C /* NestedScrollView */,
+				2ABFC2E729683E9200D9202C /* Products */,
+				086F89F1FD3B5D135FC05659 /* Pods */,
+				27533B9122669834FBF26109 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2ABFC2E729683E9200D9202C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2ABFC2E629683E9200D9202C /* NestedScrollView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2ABFC2E829683E9200D9202C /* NestedScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				2ACAC226296AAAD100E86D7A /* NestedScrollViewController */,
+				2ABFC2E929683E9200D9202C /* AppDelegate.swift */,
+				2ABFC2EB29683E9200D9202C /* SceneDelegate.swift */,
+				2ABFC2ED29683E9200D9202C /* ViewController.swift */,
+				2ABFC2FF29683FF700D9202C /* ExampleViewController.swift */,
+				2ACAC227296AB6F700E86D7A /* ExamplePageViewController.swift */,
+				2ABFC301296843B300D9202C /* OneViewController.swift */,
+				2ABFC303296843C600D9202C /* TwoViewController.swift */,
+				2ABFC305296843DD00D9202C /* ThreeViewController.swift */,
+				2ABFC2F429683E9300D9202C /* LaunchScreen.storyboard */,
+				2ABFC2EF29683E9200D9202C /* Main.storyboard */,
+				2ABFC2F229683E9300D9202C /* Assets.xcassets */,
+				2ABFC2F729683E9300D9202C /* Info.plist */,
+			);
+			path = NestedScrollView;
+			sourceTree = "<group>";
+		};
+		2ACAC226296AAAD100E86D7A /* NestedScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2ACAC224296AA82F00E86D7A /* IgnoreIndexPagingViewController.swift */,
+				2ABFC2FD29683F0D00D9202C /* NestedScrollViewController.swift */,
+				2ACAC2202969D44F00E86D7A /* ScrollViewController.swift */,
+			);
+			path = NestedScrollViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2ABFC2E529683E9200D9202C /* NestedScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ABFC2FA29683E9300D9202C /* Build configuration list for PBXNativeTarget "NestedScrollView" */;
+			buildPhases = (
+				08348E6A01229305E85A9951 /* [CP] Check Pods Manifest.lock */,
+				2ABFC2E229683E9200D9202C /* Sources */,
+				2ABFC2E329683E9200D9202C /* Frameworks */,
+				2ABFC2E429683E9200D9202C /* Resources */,
+				526C33D8CCB688E48E98098B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NestedScrollView;
+			productName = NestedScrollView;
+			productReference = 2ABFC2E629683E9200D9202C /* NestedScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2ABFC2DE29683E9200D9202C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					2ABFC2E529683E9200D9202C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 2ABFC2E129683E9200D9202C /* Build configuration list for PBXProject "NestedScrollView" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2ABFC2DD29683E9200D9202C;
+			productRefGroup = 2ABFC2E729683E9200D9202C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2ABFC2E529683E9200D9202C /* NestedScrollView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2ABFC2E429683E9200D9202C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABFC2F629683E9300D9202C /* LaunchScreen.storyboard in Resources */,
+				2ABFC2F329683E9300D9202C /* Assets.xcassets in Resources */,
+				2ABFC2F129683E9200D9202C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08348E6A01229305E85A9951 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NestedScrollView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		526C33D8CCB688E48E98098B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NestedScrollView/Pods-NestedScrollView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NestedScrollView/Pods-NestedScrollView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NestedScrollView/Pods-NestedScrollView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2ABFC2E229683E9200D9202C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABFC2FE29683F0D00D9202C /* NestedScrollViewController.swift in Sources */,
+				2ABFC2EE29683E9200D9202C /* ViewController.swift in Sources */,
+				2ABFC2EA29683E9200D9202C /* AppDelegate.swift in Sources */,
+				2ABFC306296843DD00D9202C /* ThreeViewController.swift in Sources */,
+				2ABFC302296843B300D9202C /* OneViewController.swift in Sources */,
+				2ACAC228296AB6F700E86D7A /* ExamplePageViewController.swift in Sources */,
+				2ACAC225296AA82F00E86D7A /* IgnoreIndexPagingViewController.swift in Sources */,
+				2ABFC2EC29683E9200D9202C /* SceneDelegate.swift in Sources */,
+				2ABFC30029683FF700D9202C /* ExampleViewController.swift in Sources */,
+				2ACAC2212969D44F00E86D7A /* ScrollViewController.swift in Sources */,
+				2ABFC304296843C600D9202C /* TwoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2ABFC2EF29683E9200D9202C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ABFC2F029683E9200D9202C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2ABFC2F429683E9300D9202C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ABFC2F529683E9300D9202C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2ABFC2F829683E9300D9202C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2ABFC2F929683E9300D9202C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2ABFC2FB29683E9300D9202C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC74D5EDCCA0E7DB08A04047 /* Pods-NestedScrollView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Y9XQZ45U6M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NestedScrollView/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = viabtc.com.NestedScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Wildcard;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2ABFC2FC29683E9300D9202C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0192CBE31FFE6F980185A902 /* Pods-NestedScrollView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Y9XQZ45U6M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NestedScrollView/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = viabtc.com.NestedScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Wildcard;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2ABFC2E129683E9200D9202C /* Build configuration list for PBXProject "NestedScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABFC2F829683E9300D9202C /* Debug */,
+				2ABFC2F929683E9300D9202C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ABFC2FA29683E9300D9202C /* Build configuration list for PBXNativeTarget "NestedScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABFC2FB29683E9300D9202C /* Debug */,
+				2ABFC2FC29683E9300D9202C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2ABFC2DE29683E9200D9202C /* Project object */;
+}
