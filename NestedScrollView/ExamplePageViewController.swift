@@ -88,10 +88,14 @@ class ExamplePageViewController: UIViewController {
         pageViewController.scrollView.delaysContentTouches = false
         addChild(pageViewController)
         view.addSubview(pageViewController.view)
-        pageViewController.view.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
         pageViewController.didMove(toParent: self)
+        pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            pageViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            pageViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            pageViewController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            pageViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
         
         setupGestureRecognizerShouldBeginHook(with: controller0.pagingViewController.pageViewController.scrollView)
         setupGestureRecognizerShouldBeginHook(with: controller1.pagingViewController.pageViewController.scrollView)

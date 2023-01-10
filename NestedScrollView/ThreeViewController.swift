@@ -93,7 +93,7 @@ class ThreeViewController: UIViewController, UITableViewDataSource, UITableViewD
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.numberOfRows += 100
             self.tableView.reloadData()
-            self.delegate?.scrollViewControllerDidChangeContentSize(self)
+            self.delegate?.scrollViewController(self, didChangeContentSize: self.tableView.contentSize)
             self.isLoading = false
             if self.numberOfRows >= self.maxNumberOfRows {
                 self.noMore = true
@@ -129,9 +129,13 @@ class ThreeViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
-        tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
     }
     
 //    override func viewWillAppear(_ animated: Bool) {

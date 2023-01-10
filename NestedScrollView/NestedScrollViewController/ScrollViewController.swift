@@ -14,5 +14,5 @@ protocol ScrollViewController {
 }
 
 protocol ScrollViewControllerDelegate: NSObjectProtocol {
-    func scrollViewControllerDidChangeContentSize(_ scrollViewController: ScrollViewController)
+    func scrollViewController(_ scrollViewController: ScrollViewController, didChangeContentSize contentSize: CGSize)
 }

@@ -6,22 +6,22 @@
 //
 
 import UIKit
-import SnapKit
 import Parchment
 
 class ExampleViewController: NestedScrollViewController, PagingViewControllerSizeDelegate {
-    
     
     lazy var _headerView: UIView = {
         let view = UIView()
         view.backgroundColor = .red
         let button = UIButton()
+        view.addSubview(button)
         button.setTitle("测试", for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        view.addSubview(button)
-        button.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-        }
+        button.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
         return view
     }()
     
@@ -62,8 +62,14 @@ class ExampleViewController: NestedScrollViewController, PagingViewControllerSiz
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        scrollView.refreshControl = refreshControl
+        scrollView.backgroundColor = .white
+         
         // 忽略 index >= 3 的页面
         pagingViewController.ignoreIndex = 3
+        pagingViewController.pageViewController.scrollView.bounces = false
         
         // Menu 设置风格
         pagingViewController.sizeDelegate = self
@@ -90,7 +96,7 @@ class ExampleViewController: NestedScrollViewController, PagingViewControllerSiz
     }
     
     /// 头部刷新
-    @objc override func refresh() {
+    @objc func refresh() {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
             self.scrollView.refreshControl?.endRefreshing()
         }

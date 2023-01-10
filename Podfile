@@ -7,7 +7,6 @@ target 'NestedScrollView' do
 
   # Pods for NestedScrollView
   pod 'Parchment', '~> 3.2'
-  pod 'SnapKit'
   pod 'LookinServer', :configurations => ['Debug']
   pod 'EasySwiftHook'
 end

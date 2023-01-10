@@ -6,13 +6,11 @@ PODS:
     - LookinServer/Core (= 1.1.2)
   - LookinServer/Core (1.1.2)
   - Parchment (3.2.0)
-  - SnapKit (5.6.0)
 
 DEPENDENCIES:
   - EasySwiftHook
   - LookinServer
   - Parchment (~> 3.2)
-  - SnapKit
 
 SPEC REPOS:
   trunk:
@@ -20,15 +18,13 @@ SPEC REPOS:
     - libffi-iOS
     - LookinServer
     - Parchment
-    - SnapKit
 
 SPEC CHECKSUMS:
   EasySwiftHook: dfb3d1451aa4630016c9d493742084e2151eb1c2
   libffi-iOS: 2932b5feac77dc5de0eca4a72269e2c9928a26af
   LookinServer: bb667a77f1ee594a8e91226e729dbe49f3401f5c
   Parchment: a43c440b22c8a60f7e0196b74339446d4d1d18ea
-  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 931ea483651dedde90ae99122f5bde0ed06f3d33
+PODFILE CHECKSUM: 01b994b5c187688e01967308d2865a2570f36e28
 
 COCOAPODS: 1.11.3
