@@ -18,10 +18,10 @@ class ExamplePageViewController: UIViewController {
     let controller0 = {
         let controller = ExampleViewController()
         controller.contentControllers = [
-            ThreeViewController(title: "One", delegate: controller, maxNumberOfRows: 300),
-            ThreeViewController(title: "Two", delegate: controller, maxNumberOfRows: 200),
-            ThreeViewController(title: "Three", delegate: controller, maxNumberOfRows: 500),
-            ThreeViewController(title: "Four", delegate: controller, maxNumberOfRows: 500),
+            ThreeViewController(title: "One", maxNumberOfRows: 300),
+            ThreeViewController(title: "Two", maxNumberOfRows: 200),
+            ThreeViewController(title: "Three", maxNumberOfRows: 500),
+            ThreeViewController(title: "Four", maxNumberOfRows: 500),
         ]
         return controller
     }()
@@ -31,8 +31,8 @@ class ExamplePageViewController: UIViewController {
         controller.contentControllers = [
             OneViewController(),
             TwoViewController(),
-            ThreeViewController(delegate: controller),
-            ThreeViewController(title: "Four", delegate: controller, maxNumberOfRows: 500),
+            ThreeViewController(),
+            ThreeViewController(title: "Four", maxNumberOfRows: 500),
         ]
         return controller
     }()
@@ -40,10 +40,10 @@ class ExamplePageViewController: UIViewController {
     let controller2 = {
         let controller = ExampleViewController()
         controller.contentControllers = [
-            ThreeViewController(title: "One", delegate: controller, maxNumberOfRows: 300),
-            ThreeViewController(title: "Two", delegate: controller, maxNumberOfRows: 200),
-            ThreeViewController(title: "Three", delegate: controller, maxNumberOfRows: 500),
-            ThreeViewController(title: "Four", delegate: controller, maxNumberOfRows: 500),
+            ThreeViewController(title: "One", maxNumberOfRows: 300),
+            ThreeViewController(title: "Two", maxNumberOfRows: 200),
+            ThreeViewController(title: "Three", maxNumberOfRows: 500),
+            ThreeViewController(title: "Four", maxNumberOfRows: 500),
         ]
         return controller
     }()

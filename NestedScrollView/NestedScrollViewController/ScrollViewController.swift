@@ -9,10 +9,4 @@ import UIKit
 
 protocol ScrollViewController {
     var scrollView: UIScrollView { get }
-    var delegate: ScrollViewControllerDelegate? { get set }
-    init(delegate: ScrollViewControllerDelegate?)
-}
-
-protocol ScrollViewControllerDelegate: NSObjectProtocol {
-    func scrollViewController(_ scrollViewController: ScrollViewController, didChangeContentSize contentSize: CGSize)
 }

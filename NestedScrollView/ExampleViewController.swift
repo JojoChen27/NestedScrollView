@@ -42,6 +42,10 @@ class ExampleViewController: NestedScrollViewController, PagingViewControllerSiz
         contentControllers
     }
     
+    override var topInset: CGFloat {
+        91
+    }
+    
     lazy var itemWidthCache = {
         return self.contentControllers.map {
             let title = $0.title ?? ""

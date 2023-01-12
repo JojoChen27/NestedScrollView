@@ -42,8 +42,6 @@ class ThreeViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var maxNumberOfRows = 500
     
-    weak var delegate: ScrollViewControllerDelegate?
-    
     var scrollView: UIScrollView {
         tableView
     }
@@ -93,7 +91,6 @@ class ThreeViewController: UIViewController, UITableViewDataSource, UITableViewD
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.numberOfRows += 100
             self.tableView.reloadData()
-            self.delegate?.scrollViewController(self, didChangeContentSize: self.tableView.contentSize)
             self.isLoading = false
             if self.numberOfRows >= self.maxNumberOfRows {
                 self.noMore = true
@@ -101,16 +98,19 @@ class ThreeViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
-    convenience init(title: String, delegate: ScrollViewControllerDelegate?, maxNumberOfRows: Int) {
-        self.init(delegate: delegate)
+    init(title: String, maxNumberOfRows: Int) {
+        super.init(nibName: nil, bundle: nil)
         self.maxNumberOfRows = maxNumberOfRows
         self.title = title
     }
     
-    required convenience init(delegate: ScrollViewControllerDelegate?) {
-        self.init(nibName: nil, bundle: nil)
-        self.delegate = delegate
+    init() {
+        super.init(nibName: nil, bundle: nil)
         self.title = "Three"
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     lazy var tableView = {
@@ -119,10 +119,10 @@ class ThreeViewController: UIViewController, UITableViewDataSource, UITableViewD
         view.delegate = self
         view.register(UITableViewCell.self, forCellReuseIdentifier: "\(UITableViewCell.self)")
         view.register(LoadingCell.self, forCellReuseIdentifier: "\(LoadingCell.self)")
+        // 如果MainScrollView.bottom == view.bottom, 可以这样设置安全距离
+        view.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 34, right: 0)
         view.estimatedRowHeight = 0
         view.rowHeight = 44
-        // 需要禁用 sub scrollView 的滚动
-        view.isScrollEnabled = false
         return view
     }()
     
