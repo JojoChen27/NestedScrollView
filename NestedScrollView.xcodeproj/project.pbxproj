@@ -13,13 +13,10 @@
 		2ABFC2F129683E9200D9202C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ABFC2EF29683E9200D9202C /* Main.storyboard */; };
 		2ABFC2F329683E9300D9202C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ABFC2F229683E9300D9202C /* Assets.xcassets */; };
 		2ABFC2F629683E9300D9202C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ABFC2F429683E9300D9202C /* LaunchScreen.storyboard */; };
-		2ABFC2FE29683F0D00D9202C /* NestedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC2FD29683F0D00D9202C /* NestedScrollViewController.swift */; };
 		2ABFC30029683FF700D9202C /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC2FF29683FF700D9202C /* ExampleViewController.swift */; };
 		2ABFC302296843B300D9202C /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC301296843B300D9202C /* OneViewController.swift */; };
 		2ABFC304296843C600D9202C /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC303296843C600D9202C /* TwoViewController.swift */; };
 		2ABFC306296843DD00D9202C /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABFC305296843DD00D9202C /* ThreeViewController.swift */; };
-		2ACAC2212969D44F00E86D7A /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAC2202969D44F00E86D7A /* ScrollViewController.swift */; };
-		2ACAC225296AA82F00E86D7A /* IgnoreIndexPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAC224296AA82F00E86D7A /* IgnoreIndexPagingViewController.swift */; };
 		2ACAC228296AB6F700E86D7A /* ExamplePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAC227296AB6F700E86D7A /* ExamplePageViewController.swift */; };
 		5FF59BC920ED77801D0B37AD /* Pods_NestedScrollView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228B284FF10361E888390129 /* Pods_NestedScrollView.framework */; };
 /* End PBXBuildFile section */
@@ -35,13 +32,10 @@
 		2ABFC2F229683E9300D9202C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ABFC2F529683E9300D9202C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ABFC2F729683E9300D9202C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2ABFC2FD29683F0D00D9202C /* NestedScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedScrollViewController.swift; sourceTree = "<group>"; };
 		2ABFC2FF29683FF700D9202C /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		2ABFC301296843B300D9202C /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 		2ABFC303296843C600D9202C /* TwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		2ABFC305296843DD00D9202C /* ThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
-		2ACAC2202969D44F00E86D7A /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
-		2ACAC224296AA82F00E86D7A /* IgnoreIndexPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreIndexPagingViewController.swift; sourceTree = "<group>"; };
 		2ACAC227296AB6F700E86D7A /* ExamplePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePageViewController.swift; sourceTree = "<group>"; };
 		CC74D5EDCCA0E7DB08A04047 /* Pods-NestedScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedScrollView.debug.xcconfig"; path = "Target Support Files/Pods-NestedScrollView/Pods-NestedScrollView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +90,6 @@
 		2ABFC2E829683E9200D9202C /* NestedScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				2ACAC226296AAAD100E86D7A /* NestedScrollViewController */,
 				2ABFC2E929683E9200D9202C /* AppDelegate.swift */,
 				2ABFC2EB29683E9200D9202C /* SceneDelegate.swift */,
 				2ABFC2ED29683E9200D9202C /* ViewController.swift */,
@@ -111,16 +104,6 @@
 				2ABFC2F729683E9300D9202C /* Info.plist */,
 			);
 			path = NestedScrollView;
-			sourceTree = "<group>";
-		};
-		2ACAC226296AAAD100E86D7A /* NestedScrollViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2ACAC224296AA82F00E86D7A /* IgnoreIndexPagingViewController.swift */,
-				2ABFC2FD29683F0D00D9202C /* NestedScrollViewController.swift */,
-				2ACAC2202969D44F00E86D7A /* ScrollViewController.swift */,
-			);
-			path = NestedScrollViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,16 +221,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ABFC2FE29683F0D00D9202C /* NestedScrollViewController.swift in Sources */,
 				2ABFC2EE29683E9200D9202C /* ViewController.swift in Sources */,
 				2ABFC2EA29683E9200D9202C /* AppDelegate.swift in Sources */,
 				2ABFC306296843DD00D9202C /* ThreeViewController.swift in Sources */,
 				2ABFC302296843B300D9202C /* OneViewController.swift in Sources */,
 				2ACAC228296AB6F700E86D7A /* ExamplePageViewController.swift in Sources */,
-				2ACAC225296AA82F00E86D7A /* IgnoreIndexPagingViewController.swift in Sources */,
 				2ABFC2EC29683E9200D9202C /* SceneDelegate.swift in Sources */,
 				2ABFC30029683FF700D9202C /* ExampleViewController.swift in Sources */,
-				2ACAC2212969D44F00E86D7A /* ScrollViewController.swift in Sources */,
 				2ABFC304296843C600D9202C /* TwoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

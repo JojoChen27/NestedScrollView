@@ -7,13 +7,13 @@
 
 import Parchment
 
-class IgnoreIndexPagingViewController: PagingViewController {
+open class IgnoreIndexPagingViewController: PagingViewController {
     
     /// 设置之后, index > ignoreIndex 的页面不得滑动过去
     /// 点击 index 的 item, 也只会响应代理方法
-    var ignoreIndex: Int?
+    public var ignoreIndex: Int?
     
-    override func pageViewController(_: PageViewController, viewControllerAfterViewController _: UIViewController) -> UIViewController? {
+    open override func pageViewController(_: PageViewController, viewControllerAfterViewController _: UIViewController) -> UIViewController? {
         guard
             let dataSource = infiniteDataSource,
             let currentPagingItem = state.currentPagingItem,
@@ -24,7 +24,7 @@ class IgnoreIndexPagingViewController: PagingViewController {
         return dataSource.pagingViewController(self, viewControllerFor: pagingItem)
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    open override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let item = visibleItems.pagingItem(for: indexPath) as? PagingIndexItem, let index = ignoreIndex, item.index >= index {
             delegate?.pagingViewController(self, didSelectItem: item)
             return
@@ -32,7 +32,7 @@ class IgnoreIndexPagingViewController: PagingViewController {
         super.collectionView(collectionView, didSelectItemAt: indexPath)
     }
     
-    var currentViewController: UIViewController? {
+    open var currentViewController: UIViewController? {
         guard let pagingItem = state.currentPagingItem else {
             return nil
         }

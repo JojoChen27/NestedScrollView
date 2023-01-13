@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol ScrollViewController {
+public protocol ScrollViewController {
     var scrollView: UIScrollView { get }
 }

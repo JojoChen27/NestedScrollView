@@ -5,11 +5,14 @@ PODS:
   - LookinServer (1.1.2):
     - LookinServer/Core (= 1.1.2)
   - LookinServer/Core (1.1.2)
+  - NestedScrollViewController (0.1.0):
+    - Parchment (~> 3.2)
   - Parchment (3.2.0)
 
 DEPENDENCIES:
   - EasySwiftHook
   - LookinServer
+  - NestedScrollViewController (from `./`)
   - Parchment (~> 3.2)
 
 SPEC REPOS:
@@ -19,12 +22,17 @@ SPEC REPOS:
     - LookinServer
     - Parchment
 
+EXTERNAL SOURCES:
+  NestedScrollViewController:
+    :path: "./"
+
 SPEC CHECKSUMS:
   EasySwiftHook: dfb3d1451aa4630016c9d493742084e2151eb1c2
   libffi-iOS: 2932b5feac77dc5de0eca4a72269e2c9928a26af
   LookinServer: bb667a77f1ee594a8e91226e729dbe49f3401f5c
+  NestedScrollViewController: 4142173670768b3c6a96e871f84feb0a31a3f191
   Parchment: a43c440b22c8a60f7e0196b74339446d4d1d18ea
 
-PODFILE CHECKSUM: 01b994b5c187688e01967308d2865a2570f36e28
+PODFILE CHECKSUM: 44c630326703b3c3679120f6d021395698db7268
 
 COCOAPODS: 1.11.3

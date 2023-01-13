@@ -8,7 +8,7 @@
 import UIKit
 import Parchment
 
-protocol NestedScrollViewControllerDataSource {
+public protocol NestedScrollViewControllerDataSource {
     /// 头部视图高度
     var headerViewHeight: CGFloat { get }
     /// 头部视图
@@ -23,28 +23,28 @@ protocol NestedScrollViewControllerDataSource {
 }
 
 
-class NestedScrollViewController:
+open class NestedScrollViewController:
     UIViewController,
     NestedScrollViewControllerDataSource,
     UIScrollViewDelegate,
     PagingViewControllerDelegate {
     
-    private var viewControllerOffsets: [UIViewController: CGFloat] = [:]
+    public var viewControllerOffsets: [UIViewController: CGFloat] = [:]
     
-    lazy var scrollView: UIScrollView = {
+    public lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
         view.delegate = self
         view.contentInsetAdjustmentBehavior = .never
         return view
     }()
     
-    lazy var pagingViewController = {
+    public lazy var pagingViewController = {
         let pagingViewController = IgnoreIndexPagingViewController(viewControllers: viewControllers)
         pagingViewController.delegate = self
         return pagingViewController
     }()
     
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(scrollView)
         scrollView.addSubview(headerView)
@@ -59,8 +59,8 @@ class NestedScrollViewController:
             scrollView.isScrollEnabled = false
         }
     }
-
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    
+    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == #keyPath(UIScrollView.contentSize) {
             if let scrollView = (object as? UIScrollView) {
                 let viewController = viewControllers.compactMap({ $0 as? ScrollViewController }).first(where: { $0.scrollView == scrollView })
@@ -71,7 +71,7 @@ class NestedScrollViewController:
             }
         }
     }
-
+    
     deinit {
         viewControllers.forEach {
             guard let scrollView = ($0 as? ScrollViewController)?.scrollView else { return }
@@ -79,7 +79,7 @@ class NestedScrollViewController:
         }
     }
     
-    override func viewDidLayoutSubviews() {
+    open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if let viewController = pagingViewController.currentViewController as? ScrollViewController {
             let height = actualContentHeight(with: viewController.scrollView)
@@ -91,9 +91,9 @@ class NestedScrollViewController:
         }
     }
     
-    private var headerViewTopConstraint: NSLayoutConstraint?
+    public var headerViewTopConstraint: NSLayoutConstraint?
     
-    private func makeConstraints() {
+    open func makeConstraints() {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         headerView.translatesAutoresizingMaskIntoConstraints = false
         pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
@@ -115,53 +115,53 @@ class NestedScrollViewController:
         ])
     }
     
-    func actualContentHeight(with scrollView: UIScrollView) -> CGFloat {
+    open func actualContentHeight(with scrollView: UIScrollView) -> CGFloat {
         var height = scrollView.contentSize.height
         height += scrollView.contentInset.bottom
         height += scrollView.contentInset.top
         return max(height, scrollView.frame.height)
     }
     
-    func updateContentHeight(with subContenHeight: CGFloat) {
+    open func updateContentHeight(with subContenHeight: CGFloat) {
         var height = headerViewHeight
         height += pagingViewController.options.menuHeight
         height += subContenHeight
         scrollView.contentSize = CGSize(width: 0, height: height)
     }
     
-    func updateViewOrigin(with offsetGap: CGFloat) {
+    open func updateViewOrigin(with offsetGap: CGFloat) {
         headerViewTopConstraint?.constant = offsetGap
     }
     
-    var offsetGap: CGFloat {
+    open var offsetGap: CGFloat {
         let offsetGap = scrollView.contentOffset.y - headerViewHeight
         return offsetGap
     }
     
     // MARK: - NestedScrollViewControllerDataSource
-    var headerViewHeight: CGFloat {
+    open var headerViewHeight: CGFloat {
         0
     }
     
-    var headerView: UIView {
+    open var headerView: UIView {
         UIView()
     }
     
-    var viewControllers: [UIViewController] {
+    open var viewControllers: [UIViewController] {
         []
     }
     
-    var topInset: CGFloat {
+    open var topInset: CGFloat {
         0
     }
     
-    var bottomInset: CGFloat {
+    open var bottomInset: CGFloat {
         0
     }
     
     // MARK: - UIScrollViewDelegate
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    open func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // 更新视图位置
         updateViewOrigin(with: max(offsetGap, 0))
         
@@ -180,9 +180,38 @@ class NestedScrollViewController:
         }
     }
     
+    open func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    }
+    
+    open func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    }
+    
+    open func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    }
+    
+    open func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+    }
+    
+    open func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    }
+    
+    open func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    }
+    
+    open func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
+        scrollView.scrollsToTop
+    }
+    
+    open func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+    }
+    
+    open func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIScrollView) {
+    }
+    
+    
     // MARK: - PagingViewControllerDelegate
     
-    func pagingViewController(
+    open func pagingViewController(
         _: PagingViewController,
         isScrollingFromItem currentPagingItem: PagingItem,
         toItem upcomingPagingItem: PagingItem?,
@@ -200,7 +229,10 @@ class NestedScrollViewController:
         }
     }
     
-    func pagingViewController(
+    open func pagingViewController(_: PagingViewController, willScrollToItem pagingItem: PagingItem, startingViewController: UIViewController, destinationViewController: UIViewController) {
+    }
+    
+    open func pagingViewController(
         _ pagingViewController: PagingViewController,
         didScrollToItem pagingItem: PagingItem,
         startingViewController: UIViewController?,
@@ -237,7 +269,6 @@ class NestedScrollViewController:
         }
     }
     
-    func pagingViewController(_ pagingViewController: PagingViewController, didSelectItem pagingItem: PagingItem) {
-        
+    open func pagingViewController(_ pagingViewController: PagingViewController, didSelectItem pagingItem: PagingItem) {
     }
 }

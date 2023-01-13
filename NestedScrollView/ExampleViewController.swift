@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NestedScrollViewController
 import Parchment
 
 class ExampleViewController: NestedScrollViewController, PagingViewControllerSizeDelegate {
