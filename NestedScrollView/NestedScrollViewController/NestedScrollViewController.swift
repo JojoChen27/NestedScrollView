@@ -92,22 +92,33 @@ open class NestedScrollViewController:
     }
     
     public var headerViewTopConstraint: NSLayoutConstraint?
+    public var headerViewHeightConstraint: NSLayoutConstraint?
+    public var topInsetConstraint: NSLayoutConstraint?
+    public var bottomInsetConstraint: NSLayoutConstraint?
     
     open func makeConstraints() {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         headerView.translatesAutoresizingMaskIntoConstraints = false
         pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        let topInsetConstraint = scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: topInset)
+        self.topInsetConstraint = topInsetConstraint
+        let bottomInsetConstraint = scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -bottomInset)
+        self.bottomInsetConstraint = bottomInsetConstraint
         let headerViewTopConstraint = headerView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0)
         self.headerViewTopConstraint = headerViewTopConstraint
+        let headerViewHeightConstraint = headerView.heightAnchor.constraint(equalToConstant: headerViewHeight)
+        self.headerViewHeightConstraint = headerViewHeightConstraint
+        
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: topInset),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -bottomInset),
+            topInsetConstraint,
+            bottomInsetConstraint,
             headerViewTopConstraint,
             headerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             headerView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: headerViewHeight),
+            headerViewHeightConstraint,
             pagingViewController.view.topAnchor.constraint(equalTo: headerView.bottomAnchor),
             pagingViewController.view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             pagingViewController.view.widthAnchor.constraint(equalTo: scrollView.widthAnchor),

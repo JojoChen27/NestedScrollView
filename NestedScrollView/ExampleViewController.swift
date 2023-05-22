@@ -28,9 +28,11 @@ class ExampleViewController: NestedScrollViewController, PagingViewControllerSiz
     
     var contentControllers: [UIViewController] = []
     
+    var _headerViewHeight: CGFloat = 300
+    
     /// 返回头部高度
     override var headerViewHeight: CGFloat {
-        500
+        _headerViewHeight
     }
     
     /// 返回头部视图
@@ -43,8 +45,9 @@ class ExampleViewController: NestedScrollViewController, PagingViewControllerSiz
         contentControllers
     }
     
+    var _topInset: CGFloat = 91
     override var topInset: CGFloat {
-        91
+        _topInset
     }
     
     lazy var itemWidthCache = {
@@ -98,6 +101,12 @@ class ExampleViewController: NestedScrollViewController, PagingViewControllerSiz
     
     @objc func buttonAction(_ button: UIButton) {
         print(#function)
+        // 修改高度
+        _headerViewHeight = 500
+        headerViewHeightConstraint?.constant = _headerViewHeight
+        // 修改Top inset
+        _topInset = 200
+        topInsetConstraint?.constant = _topInset
     }
     
     /// 头部刷新
