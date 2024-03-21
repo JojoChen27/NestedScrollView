@@ -44,6 +44,8 @@ open class NestedScrollViewController:
         return pagingViewController
     }()
     
+    private var obsTokens = [NSKeyValueObservation]()
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(scrollView)
@@ -55,27 +57,16 @@ open class NestedScrollViewController:
         
         viewControllers.forEach {
             guard let scrollView = ($0 as? ScrollViewController)?.scrollView else { return }
-            scrollView.addObserver(self, forKeyPath: #keyPath(UIScrollView.contentSize), options: [.new], context: nil)
             scrollView.isScrollEnabled = false
-        }
-    }
-    
-    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == #keyPath(UIScrollView.contentSize) {
-            if let scrollView = (object as? UIScrollView) {
-                let viewController = viewControllers.compactMap({ $0 as? ScrollViewController }).first(where: { $0.scrollView == scrollView })
-                if let viewController = viewController as? UIViewController, viewController == pagingViewController.currentViewController {
-                    let height = actualContentHeight(with: scrollView)
-                    updateContentHeight(with: height)
+            let obs = scrollView.observe(\.contentSize, options: [.new]) { [weak self] scroll, value in
+                guard let self else { return }
+                let viewController = self.viewControllers.compactMap({ $0 as? ScrollViewController }).first(where: { $0.scrollView == scroll })
+                if let viewController = viewController as? UIViewController, viewController == self.pagingViewController.currentViewController {
+                    let height = self.actualContentHeight(with: scroll)
+                    self.updateContentHeight(with: height)
                 }
             }
-        }
-    }
-    
-    deinit {
-        viewControllers.forEach {
-            guard let scrollView = ($0 as? ScrollViewController)?.scrollView else { return }
-            scrollView.removeObserver(self, forKeyPath: #keyPath(UIScrollView.contentSize))
+            obsTokens.append(obs)
         }
     }
     
