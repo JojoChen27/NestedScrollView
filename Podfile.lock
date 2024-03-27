@@ -5,7 +5,7 @@ PODS:
   - LookinServer (1.1.2):
     - LookinServer/Core (= 1.1.2)
   - LookinServer/Core (1.1.2)
-  - NestedScrollViewController (0.1.1):
+  - NestedScrollViewController (0.1.2):
     - Parchment (~> 3.2)
   - Parchment (3.2.0)
 
@@ -30,7 +30,7 @@ SPEC CHECKSUMS:
   EasySwiftHook: dfb3d1451aa4630016c9d493742084e2151eb1c2
   libffi-iOS: 2932b5feac77dc5de0eca4a72269e2c9928a26af
   LookinServer: bb667a77f1ee594a8e91226e729dbe49f3401f5c
-  NestedScrollViewController: eacb492aeede60a38cbd9d005e54855fb4d0d721
+  NestedScrollViewController: ea41c63990fdca73f7a651bb2fc43d7f782570e2
   Parchment: a43c440b22c8a60f7e0196b74339446d4d1d18ea
 
 PODFILE CHECKSUM: 44c630326703b3c3679120f6d021395698db7268
