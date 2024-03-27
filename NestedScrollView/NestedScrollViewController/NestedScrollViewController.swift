@@ -54,7 +54,11 @@ open class NestedScrollViewController:
         scrollView.addSubview(pagingViewController.view)
         pagingViewController.didMove(toParent: self)
         makeConstraints()
-        
+        observeListScrollView()
+    }
+    
+    open func observeListScrollView() {
+        obsTokens.removeAll()
         viewControllers.forEach {
             guard let scrollView = ($0 as? ScrollViewController)?.scrollView else { return }
             scrollView.isScrollEnabled = false
