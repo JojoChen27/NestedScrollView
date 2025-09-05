@@ -22,6 +22,18 @@ public protocol NestedScrollViewControllerDataSource {
     var bottomInset: CGFloat { get }
 }
 
+/// 自动布局会更新contentSize变为0，过滤height为0的设置，保证contentSize正确
+class NonZeroContentScrollView: UIScrollView {
+    override var contentSize: CGSize {
+        get {
+            super.contentSize
+        }
+        set {
+            guard newValue.height != 0 else { return }
+            super.contentSize = newValue
+        }
+    }
+}
 
 open class NestedScrollViewController:
     UIViewController,
@@ -32,7 +44,7 @@ open class NestedScrollViewController:
     public var viewControllerOffsets: [UIViewController: CGFloat] = [:]
     
     public lazy var scrollView: UIScrollView = {
-        let view = UIScrollView()
+        let view = NonZeroContentScrollView()
         view.delegate = self
         view.contentInsetAdjustmentBehavior = .never
         return view
